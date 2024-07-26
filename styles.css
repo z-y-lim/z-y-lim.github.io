@@ -418,6 +418,7 @@ article .icon {
 
 .email-icon {
   height: 2.5rem;
+  cursor: pointer;
 }
 
 /* FOOTER SECTION */
