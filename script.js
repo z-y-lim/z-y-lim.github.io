@@ -27,6 +27,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 document.addEventListener("DOMContentLoaded", function() {
     const highlightElements = document.querySelectorAll('.highlight-effect-yellow, .highlight-effect-green, .highlight-effect-light-blue');
+    let inViewCount = 0; // Count of elements in view
+    const totalElements = highlightElements.length; // Total number of highlight elements
+    const delay = 2000; // Set a common delay of 5 seconds for all highlight effects
 
     const observerOptions = {
         root: null, // Use the viewport as the container
@@ -37,19 +40,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const observerCallback = (entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Determine the delay based on the class of the element
-                let delay = 5000; // Default delay of 5 seconds for highlight effects
-                if (entry.target.classList.contains('highlight-effect-light-blue')) {
-                    delay = 2000; // 2 seconds for the center underline effect
+                // Increment count of elements in view
+                inViewCount++;
+
+                // If all elements are in view, trigger the animation
+                if (inViewCount === totalElements) {
+                    highlightElements.forEach(element => {
+                        // Add the 'visible' class with a common delay
+                        setTimeout(() => {
+                            element.classList.add('visible');
+                        }, delay);
+                    });
+
+                    // Unobserve all elements after they become visible
+                    highlightElements.forEach(element => {
+                        observer.unobserve(element);
+                    });
                 }
-
-                // Add the 'visible' class with a delay
-                setTimeout(() => {
-                    entry.target.classList.add('visible');
-                }, delay);
-
-                // Optionally, unobserve the element after it becomes visible
-                observer.unobserve(entry.target);
             }
         });
     };
