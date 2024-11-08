@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const observerOptions = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.0 // Adjusted for testing
+        threshold: 0.5 // Adjusted for testing
     };
 
     const handleIntersection = (entries, observer) => {

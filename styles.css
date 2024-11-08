@@ -53,6 +53,10 @@
   padding-bottom: 5px; 
 }
 
+html { 
+  scroll-behavior: smooth; 
+}
+
 /*SECTION 1: TOP SECTION*/
 .top-section{
   margin-left: 0rem;
@@ -230,7 +234,7 @@ to { border-color: green; }
   line-height: 1.5; /* Ensure consistent line-height */
 }
 
-.highlight-effect-green, .highlight-effect-yellow {
+.highlight-effect {
   display: inline; /* Ensure highlighted text stays inline */
   margin: 0; /* Remove margin that might cause misalignment */
   padding: 0; /* Remove padding */
@@ -360,11 +364,15 @@ to { border-color: green; }
 
 /*Highlight animation light blue*/
 .highlight-effect-orange {
-  padding-right: 5px;
+  padding: 0px 5px;
 }
 
 .highlight-effect-orange::before {
   background: #FB8500;
+}
+
+.highlight-effect-beige::before{
+  background: #EAE2B7;
 }
 
 /*colour-legend display*/
@@ -377,6 +385,18 @@ to { border-color: green; }
 }
 
 .colour-legend-text {
+  color: #000;
+  font-style: italic;
+  display: flex;
+  text-align: left;
+  margin-top: 0;
+  padding: 0;
+  align-items: center;
+  padding-right: 10px;
+}
+
+/* Resume line */
+.resume-line {
   color: #000;
   font-style: italic;
   display: flex;
@@ -403,7 +423,6 @@ to { border-color: green; }
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #E76F51;
   transition: transform 2s ease-out; /* Animation for the underline */
   transform-origin: bottom left; /* Make the underline grow from left to right */
 }
@@ -424,6 +443,10 @@ to { border-color: green; }
   transform-origin: bottom left;
 }
 
+/*underline-animation red*/
+.left-underline-animation-red::after {
+  background-color: #E76F51;
+}
 
 /*Projects*/
 /* Styling for the project container */
@@ -534,10 +557,11 @@ to { border-color: green; }
   margin-left: 0.5rem;
   text-align: left;
   margin-top: 0.5rem;
-  display: flex;
+  display: inline-block;
   flex-direction: column; /* Stack children vertically */
   align-items: flex-start; /* Align children to the start */
   width: 100%;
+  vertical-align: middle; 
 }
 
 .project-description p {
@@ -677,6 +701,14 @@ to { border-color: green; }
   font-size: 2.0rem;
 }
 
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
 
 
 
