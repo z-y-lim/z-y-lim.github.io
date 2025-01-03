@@ -371,10 +371,6 @@ to { border-color: green; }
   background: #FB8500;
 }
 
-.highlight-effect-beige::before{
-  background: #EAE2B7;
-}
-
 /*colour-legend display*/
 .colour-legend {
   display: flex;          
@@ -446,6 +442,10 @@ to { border-color: green; }
 /*underline-animation red*/
 .left-underline-animation-red::after {
   background-color: #E76F51;
+}
+
+.left-underline-animation-green::after {
+  background-color: #2A9D8F;
 }
 
 /*Projects*/
@@ -562,6 +562,7 @@ to { border-color: green; }
   align-items: flex-start; /* Align children to the start */
   width: 100%;
   vertical-align: middle; 
+  word-wrap: break-word;
 }
 
 .project-description p {
