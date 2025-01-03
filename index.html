@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Colour-palettes: https://coolors.co/palette/264653-2a9d8f-e9c46a-f4a261-e76f51
+         https://coolors.co/palette/003049-d62828-f77f00-fcbf49-eae2b7
+         https://coolors.co/palette/8ecae6-219ebc-023047-ffb703-fb8500
+         --> 
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="styles.css" />
+        <link rel="stylesheet" href="mediaqueries.css" />
+    </head>
+    <body>
+        <!-- Right-aligned menu bar -->
+            <div class="rightNav">
+                <ul class="nav-list">
+                    <li><a href=#projects class="scroll">Projects</a></li>
+                    <li><a href=#contact class="scroll">Contact</a></li>
+                </ul>
+            </div>
+
+        <!-- SECTION 1: TOP-->
+        <!-- Name/logo -->
+        <div class = "top-section">
+            <div class="logo-and-subtext">
+                <div class="container">
+                    <div class="typed-out">
+                        L. Zhen Yi
+                    </div>
+                </div>
+                <!-- Name clarifications -->
+                <div class="subtext">
+                    <p>/ zhēn yí / a.k.a Sun Yi&nbsp;&nbsp;<div class="sun-symbol">&#9728;</div></p>
+                </div>
+            </div>
+
+            <!-- About/Brief intro-->
+            <div class="about-and-buttons">
+                <div class="container">
+                    <div class="body-text">
+                        <p>Final-year computer science student</p>
+                    </div>
+                </div>
+
+                <!-- Email, github, linkedin and resume buttons -->
+                <div class="btn-container">
+                    <!-- Email -->
+                    <button class="button">
+                        <img 
+                            src="/assets/email.png"
+                            alt="My email"
+                            class="icon"
+                            onclick="location.href='mailto:zhenyi.lim.mail@gmail.com'"
+                        >
+                    </button>
+                    <!-- Linkedin -->
+                    <button class="button">
+                        <img
+                            src="/assets/linkedin-white.png"
+                            alt="My linkedin profile"
+                            class="icon"
+                            onclick="location.href='https://github.com/z-y-lim'"
+                            />
+                    </button>
+                    <!-- GitHub-->
+                    <button class="button">
+                        <img
+                            src="/assets/github-white.png"
+                            alt="My github profile"
+                            class="icon"
+                            onclick="location.href='https://github.com/z-y-lim'"
+                            />
+                    </button>
+                    <!-- Resume -->
+                    <button class="button">Get my resume</button>
+                </div>
+            </div>
+        </div>
+
+        <!--Brief skills introduction -->
+        <!-- Education, location, programming languages, softwares/programmes, Looking for roles in, interests-->
+        <div class="content-container">
+            <div class="content">
+                <p> <span class="content-header">
+                    Education:</span><br>
+                    B.Sc. Computer Science, University of Western Australia '25
+                </p>
+            </div>
+            
+            <div class="content">
+                <p> <span class="content-header">
+                    Locations:</span><br>
+                    <span class="content-line">
+                        Kuala Lumpur, Malaysia
+                    </span>
+                    <span class="content-line">
+                    <span class="arrow">
+                        &harr; 
+                    </span>
+                    </span>
+                    <span class="highlight-effect highlight-effect-light-blue">Perth, Western Australia</span>
+                    </span>
+                </p>
+                <!-- Colour legend for current location-->
+                <div class = "colour-legend">
+                    <div class="colour-box colour-box-light-blue"></div>:&nbsp;<span class="colour-legend-text">current location</span> 
+                </div>
+            </div>
+
+            <div class="content">
+                <p><span class="content-header">
+                    Programming languages:</span><br>
+                    <span class="content-line-programming-languages">
+                         <span class="highlight-effect highlight-effect-green">HTML</span>,&nbsp;
+                        <span class="highlight-effect highlight-effect-green">CSS</span>,
+                        Javascript, 
+                        Python, 
+                        C,&nbsp;
+                        <span class="highlight-effect highlight-effect-yellow">MySQL</span>, 
+                        Tableau
+                    </span>
+                </p>
+                <!-- Colour legend for software skills-->
+                <div class = colour-legend>
+                    <div class="colour-box colour-box-green"></div>:&nbsp;<span class="colour-legend-text">proficient</span>
+                    <div class="colour-box colour-box-yellow"></div>:&nbsp;<span class="colour-legend-text">intermediate</span> 
+                </div>
+            </div>
+
+            <div class="content">
+                <p> <span class="content-header">
+                    Software/programmes:</span><br>
+                    Microsoft Office,
+                    Canva,
+                    Figma,
+                    LinuxOS,
+                    WindowsOS
+                </p>
+            </div>
+
+            <div class="content">
+                <p> <span class="content-header">
+                        <span class="left-underline-animation-red left-underline-animation">
+                            Looking for roles in:
+                        </span>
+                    </span><br>
+                    Software engineering, 
+                    web development,
+                    analytics,
+                    IT
+                </p>
+                <div class="resume-line">
+                    Get it here &rarr;&nbsp;
+                    <span class="highlight-effect highlight-effect-orange">
+                      Resume&#9734;
+                    </span>
+                </div>
+            </div>
+
+            <div class="content">
+                <p> <span class="content-header">
+                    Interests:</span><br>
+                    Fantasy/fiction,
+                    cooking,
+                    baking,
+                    calisthenics,
+                    creative writing
+                </p>
+            </div>
+        </div>
+
+        <!-- Projects -->
+         <a id ="projects"></a>
+        <div class = "project-container">
+           <div class="project-container-header">
+                Projects
+            </div>
+
+            <div class="project">
+                <div class="project-name">
+                    <span class="center-underline"><h2>Portfolio Website</h2></span>
+                </div>
+                    <p class="project-description">
+                        Inspired by several minimalist website designs, I created this portfolio to 
+                        display my projects and improve my web development skills. I experienced building 
+                        a website from scratch for the first time and implemented different animation 
+                        techniques to make it's simple style engaging and fun. 
+                    </p>  
+                <div class="tech-stack">
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>Javascript</li>
+                </ul>
+                </div>
+                <div class="project-buttons">
+                    <button>Live Demo</button>
+                    <button>
+                        <img 
+                        src="/assets/github-black.png";
+                        class="icon";
+                        >
+                        Source code
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!--Contact-->
+        <a id="contact"></a>
+        <div class="contact-container">
+            <div class="contact-container-header">
+                Contact
+            </div>
+            <div class="contact-items">
+                <p class="left-underline-animation-green left-underline-animation">
+                    <a href='mailto:zhenyi.lim.mail@gmail.com'>
+                        Email
+                    </a>
+                </p><br>
+
+                <p class="left-underline-animation-green left-underline-animation">
+                    <a href='www.linkedin.com/in/l-zhenyi'>
+                        Linkedin
+                    </a>
+                </p><br>
+
+                <p class="left-underline-animation-green left-underline-animation">
+                    <a href='https://github.com/z-y-lim'>
+                        Github
+                    </a>
+                </p>
+
+            </div>
+        </div>
+
+    <script src="script.js"></script>
+    </body>
+</html>

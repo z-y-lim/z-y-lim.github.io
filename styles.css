@@ -1,0 +1,715 @@
+/*Navigation bar*/
+.nav-list {
+  display: flex;
+  list-style: none;
+}
+
+.nav-list li {
+  margin-right: 20px;
+}
+
+.nav-list li:last-child {
+  margin-right: 1.0rem;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #363946;
+  font-size: 1.4rem;
+  transition: color 0.3s ease-in-out;
+  border-radius: 5px;
+  padding: 0rem 0.5rem;
+}
+
+.nav-list li a:hover {
+  cursor: pointer;
+}
+
+.rightNav {
+  display: flex;
+  justify-content: flex-end; 
+  flex-grow: 1; 
+}
+
+/*nav-list underline animation*/
+.nav-list li a::after {
+  content: '';
+  position: absolute;
+  height: 3px; /* Adjust height as needed */
+  left: 0;
+  bottom: 0;
+  width: 0;
+  background: green;
+  transition: width 0.2s ease;
+}
+
+.nav-list li a:hover::after {
+  width: 100%;
+}
+
+.nav-list li a {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 5px; 
+}
+
+html { 
+  scroll-behavior: smooth; 
+}
+
+/*SECTION 1: TOP SECTION*/
+.top-section{
+  margin-left: 0rem;
+}
+
+/*Typing out effect for name*/
+.container{
+  display: inline-block;
+}
+
+.typed-out{
+  overflow: hidden;
+  border-right: .30em solid green;
+  border-radius: 4px;
+  white-space: nowrap;
+  animation: 
+    typing 2s steps(20, end) forwards,
+    blinking 1.5s infinite 2s;
+  font-size: 2.8rem; /*Was 1.6rem*/
+  width: 0;
+}
+@keyframes typing {
+from { width: 0 }
+to { width: 100% }
+}
+@keyframes blinking {
+from { border-color: transparent }
+to { border-color: green; }
+}
+
+/*name and subtext*/
+.logo-and-subtext {
+  margin-left: 0.25rem;
+}
+
+/*Subtext under name*/
+.subtext {
+  color: #363946;
+  font-style: italic;
+  display: flex;
+  text-align: left;
+  margin-top: 0;
+  padding: 0;
+  align-items: center;
+  padding-right: 10px;
+}
+
+/*Subtext sun symbol*/
+.sun-symbol {
+  color: #363946;
+  display: inline-block; 
+  width: auto;           
+  height: auto;          
+  line-height: 0;        
+  vertical-align: middle;
+  font-style: normal;
+}
+
+/*.subtext:hover .sun-symbol {
+  animation: spin 2s linear infinite;  
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);  
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+} */
+
+.about-and-buttons {
+  margin-left: 0.5rem;
+}
+
+/*Intro*/
+.body-text {
+  text-align: center;
+}
+
+/*Button container*/
+.btn-container {
+  display: flex;
+  gap: 1rem; /* Spacing between the buttons */
+  justify-content: left;
+  margin-bottom: 2.0rem;
+}
+
+/*Contact buttons*/
+.button {
+  background-color: #111827;
+  border: 1px solid transparent;
+  border-radius: .75rem;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex: 0 0 auto;
+  font-family: "Inter var",ui-sans-serif,system-ui,-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.125rem; /* Font size of button text */
+  font-weight: 600;
+  line-height: 1.5rem; /* Line height for text */
+  padding: .75rem 1.2rem;
+  text-align: center;
+  text-decoration: none #6B7280 solid;
+  text-decoration-thickness: auto;
+  transition-duration: .2s;
+  transition-property: background-color,border-color,color,fill,stroke;
+  transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  display: inline-flex; 
+  align-items: center; 
+}
+
+.button:hover {
+  background-color: #374151;
+}
+
+.button:focus {
+  box-shadow: none;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+}
+
+
+.icon {
+  height: 1.8rem;  
+  width: 1.8rem;   
+  display: inline-block;
+  vertical-align: middle;  
+}
+
+/*Content overview*/
+.content-container {
+  border: 3px solid #000;
+  border-radius: 5px;
+  padding: .75rem 2rem 2rem 2rem;
+  justify-content: center; 
+  margin: auto; 
+  max-width: 575px;
+  width: 100%; 
+  box-sizing: border-box; 
+  margin-bottom:2.0rem;
+}
+
+.content-container p {
+  margin-bottom: 0;
+}
+
+.content-header{
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.content-line {
+  display: inline-flex;           
+  align-items: center;    
+  margin-bottom: 0;
+  flex-wrap: flex;        
+}
+
+.arrow {
+  display: inline; /* Keep it inline for desktop */
+  margin: 0 5px; /* Add some margin for spacing */
+}
+
+.content {
+ margin-bottom: 1.5rem;
+}
+
+.programming-languages {
+  display: inline; /* Keep everything inline */
+  line-height: 1.5; /* Ensure consistent line-height */
+}
+
+.highlight-effect {
+  display: inline; /* Ensure highlighted text stays inline */
+  margin: 0; /* Remove margin that might cause misalignment */
+  padding: 0; /* Remove padding */
+  vertical-align: middle;
+}
+
+/*TEST MEDIA STUFF*/
+@media (max-width: 600px) {
+  .content-line {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: flex-start; /* Align items to the start */
+      margin-bottom: 0; /* Add some space between lines */
+  }
+
+  .arrow {
+    display: block; /* Make the arrow block to ensure it appears on its own line */
+    margin: 0;
+    line-height: 1;
+}
+
+.highlight-effect-light-blue {
+  margin-bottom: 0;
+}
+
+  .content-header {
+      font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
+  .colour-legend {
+      flex-direction: row; /* Keep items in a row */
+      align-items: center; /* Center align items */
+  }
+
+  .colour-legend-text {
+      font-size: 0.9rem; /* Adjust font size for mobile */
+      margin-top: 0;
+  }
+
+  .programming-languages {
+    display: inline; /* Make sure it's inline so all elements are on the same line */
+    white-space: nowrap; /* Prevent the line from wrapping */
+    font-size: 1rem; /* Adjust font size for mobile */
+    overflow: hidden; /* Prevent overflow (optional, depending on the design) */
+  }
+
+  /* Ensure the highlighted spans are inline and don’t cause wrapping */
+  .highlight-effect-green, .highlight-effect-yellow {
+    display: inline; /* Make sure highlighted text stays inline */
+    margin: 0; /* Reset any unwanted margins */
+  }
+}
+
+/*Colour boxes*/
+.colour-box {
+  width: 1.0rem;
+  height: 1.0rem;
+  border-radius: 2px;
+  display: inline-block;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.colour-box-yellow {
+  background-color: #ffb703;
+}
+.colour-box-green {
+  background-color: #2A9D8F;
+}
+.colour-box-light-blue {
+  background-color: #219ebc;
+}
+
+/* All highlght animations*/
+/* Keyframe for the animation */
+@keyframes highlight-animation {
+  100% {
+    width: 100%;  /* Expand the highlight to full width */
+  }
+}
+
+.highlight-effect {
+  position: relative;
+  padding-right: 0;
+  display: inline-block;  
+  overflow: hidden;
+}
+
+.highlight-effect::before {
+    position: absolute;
+    content: '';
+    height: 20px;
+    left: 0;
+    bottom: 0;
+    width: 0%;  
+    opacity: 0.7;
+    transition: width 2s ease; 
+    z-index: -1;
+}
+
+.highlight-effect.visible::before {
+  width: 100%; /* Trigger the animation by changing width */
+}
+
+/*highlight animation yellow*/
+
+.highlight-effect-yellow::before {
+  background: #ffb703;
+  border-radius: 5px;
+}
+
+
+/* Highlight animation green*/
+.highlight-effect-green::before {
+  background: #2A9D8F;
+  border-radius: 5px;
+}
+
+/*Highlight animation light blue*/
+.highlight-effect-light-blue {
+  padding-right: 5px;
+}
+
+.highlight-effect-light-blue::before {
+  background: #219ebc;
+  border-radius: 15px 50px 30px 45px;
+}
+
+/*Highlight animation light blue*/
+.highlight-effect-orange {
+  padding: 0px 5px;
+}
+
+.highlight-effect-orange::before {
+  background: #FB8500;
+}
+
+/*colour-legend display*/
+.colour-legend {
+  display: flex;          
+  align-items: center;    
+  justify-content: flex-start;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.colour-legend-text {
+  color: #000;
+  font-style: italic;
+  display: flex;
+  text-align: left;
+  margin-top: 0;
+  padding: 0;
+  align-items: center;
+  padding-right: 10px;
+}
+
+/* Resume line */
+.resume-line {
+  color: #000;
+  font-style: italic;
+  display: flex;
+  text-align: left;
+  margin-top: 0;
+  padding: 0;
+  align-items: center;
+  padding-right: 10px;
+}
+
+/*Roles underline animation* Left to right*/
+.left-underline-animation {
+  display: inline-block;
+  position: relative;
+  opacity: 0; /* Initially invisible */
+  transition: opacity 0.3s ease-in-out; /* Fade-in effect */
+}
+
+.left-underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0); /* Initially hide the underline */
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transition: transform 2s ease-out; /* Animation for the underline */
+  transform-origin: bottom left; /* Make the underline grow from left to right */
+}
+
+.left-underline-animation.visible {
+  opacity: 1; /* Make it visible */
+}
+
+.left-underline-animation.visible::after {
+  transform: scaleX(1); /* Trigger the underline animation */
+}
+
+.left-underline-animation.left::after {
+  transform-origin: bottom right; /* If you want it to animate from right to left */
+}
+
+.left-underline-animation.left.visible::after {
+  transform-origin: bottom left;
+}
+
+/*underline-animation red*/
+.left-underline-animation-red::after {
+  background-color: #E76F51;
+}
+
+.left-underline-animation-green::after {
+  background-color: #2A9D8F;
+}
+
+/*Projects*/
+/* Styling for the project container */
+.project-container-header {
+  font-size: 2.0rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.project {
+    padding: 20px;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    justify-content: space-between;
+    border:3px solid #111827;
+    border-radius: 25px;
+    padding: .75rem 2.5rem 2rem 2rem;
+    justify-content: center; 
+    margin: auto; 
+    max-width: 800px;
+    width: 100%; 
+    box-sizing: border-box; 
+    margin-bottom:2.0rem;
+}
+
+.project-name {
+  margin-bottom: 0;
+  padding:0;
+}
+
+/*Source code and live demo buttons */
+.project-buttons {
+  margin-top: auto; /* Pushes the buttons to the bottom */
+  display: flex; /* Use flexbox for button layout */
+  gap: 10px; /* Optional: space between buttons */
+}
+
+
+/* Live demo and source code buttons */
+.project-buttons button {
+  background: #fff;
+  backface-visibility: hidden;
+  border-radius: .375rem;
+  border-style: solid;
+  border-width: .125rem;
+  box-sizing: border-box;
+  color: #212121;
+  cursor: pointer;
+  display: inline-block;
+  font-family: Circular,Helvetica,sans-serif;
+  font-weight: 700;
+  letter-spacing: -.01em;
+  line-height: 1.3;
+  padding: .5rem 1rem; /* Reduce padding to make buttons smaller */
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transform: translateZ(0) scale(1);
+  transition: transform .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  font-size: 1rem; /* Adjust font size */
+}
+
+.project-buttons button:not(:disabled):hover {
+  transform: scale(1.05);
+}
+
+.project-buttons button:not(:disabled):hover:active {
+  transform: scale(1.05) translateY(.125rem);
+}
+
+.project-buttons button:focus {
+  outline: 0 solid transparent;
+}
+
+.project-buttons button:focus:before {
+  content: "";
+  left: calc(-1*.375rem);
+  pointer-events: none;
+  position: absolute;
+  top: calc(-1*.375rem);
+  transition: border-radius;
+  user-select: none;
+}
+
+.project-buttons button:focus:not(:focus-visible) {
+  outline: 0 solid transparent;
+}
+
+.project-buttons button:focus:not(:focus-visible):before {
+  border-width: 0;
+}
+
+.project-buttons button:not(:disabled):active {
+  transform: translateY(.125rem);
+}
+
+.project-buttons .icon {
+  width: 16px; /* Adjust icon size to match smaller buttons */
+  height: 16px;
+  margin-right: 5px; /* Space between icon and text */
+}
+
+.project-description {
+  margin-left: 0.5rem;
+  text-align: left;
+  margin-top: 0.5rem;
+  display: inline-block;
+  flex-direction: column; /* Stack children vertically */
+  align-items: flex-start; /* Align children to the start */
+  width: 100%;
+  vertical-align: middle; 
+  word-wrap: break-word;
+}
+
+.project-description p {
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
+
+@media screen and (max-width: 600px) {
+  .project-description {
+    width: 100%;
+  }
+}
+
+/* project name animations*/
+.project-name {
+  position: relative;
+  color: #000;
+  text-decoration: none; /* Optional */
+  opacity: 0; /* Start hidden */
+  transform: translateY(20px); /* Start slightly below */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Transition for fade-in and move */
+}
+
+.project-name.visible {
+  opacity: 1; /* Fade in */
+  transform: translateY(0); /* Move to original position */
+}
+
+.project-name::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #000;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.project-name.visible::before {
+  transform: scaleX(1);
+}
+
+/* Tech stack div*/
+.tech-stack{
+  margin-bottom: 1rem;
+}
+
+.tech-stack ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove padding */
+  margin: 0; /* Remove margin */
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 1rem; /* Space between items */
+  justify-content: flex-end;
+  
+}
+
+.tech-stack li {
+  background-color: #fff;
+  border-radius: 1.5rem;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  color: #0d172a;
+  cursor: normal;
+  display: inline-block;
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding: 0.5rem 1.0rem;
+  text-align: center;
+  transition: background-color 0.1s cubic-bezier(.4, 0, .2, 1), color 0.1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  border: 1px solid #1e293b;
+  font-size: 1rem;
+}
+
+.tech-stack li:hover {
+  background-color: #1e293b; /* Dark background on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+@media (min-width: 768px) {
+  
+  .button {
+    padding: .75rem 1.5rem;
+  }
+
+  .tech-stack {
+    padding-right: 0; /* Remove padding on mobile */
+    clear: both;
+  }
+}
+
+@media (max-width: 768px) {
+  .tech-stack {
+    display: flex; /* Ensure the tech stack is a flex container */
+    flex-wrap: wrap; /* Allow items to wrap onto new lines */
+    gap: 10px; /* Space between items */
+  }
+
+
+  /* Ensure tech stack buttons take full width on small screens */
+  .project-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; /* Space between buttons */
+    margin-top: auto;
+  }
+
+  .project-buttons button {
+    flex: 1 1 calc(50% - 10px); /* Two buttons per row on mobile */
+    padding: .25rem .25rem; /* Smaller padding for mobile */
+    font-size: .875rem; /* Adjust font size */
+  }
+}
+
+/* Additional media query for smaller mobile view (600px) */
+@media screen and (max-width: 600px) {
+  .project-description {
+    width: 100%;
+  }
+}
+
+.project-name h2 {
+  margin-bottom: 0.5rem;
+}
+
+/*Contact*/
+.contact-container{
+  text-align: center;
+  list-style-type:none;
+}
+
+.contact-container-header {
+  font-size: 2.0rem;
+}
+
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #000;
+}
+
+
+
